@@ -16,9 +16,9 @@ void AccelerateEnemy::Draw() const{
 void AccelerateEnemy::Update(float deltaTime) {
     Enemy::Update(deltaTime);
     // 若血量低於 40% 且尚未加速，則速度翻倍
-    if (!accelerated && hp < maxHp * 0.6f) {
-        baseSpeed *= 3.5f;  // 提高基礎速度
-        speed      *= 3.5f;  // 馬上套用到當前速度
+    if (!accelerated && hp < maxHp * 0.1f) {
+        baseSpeed *= 5.0f;  // 提高基礎速度
+        speed      *= 5.0f;  // 馬上套用到當前速度
         accelerated = true;
         head.bmp = Engine::Resources::GetInstance().GetBitmap("play/enemy-10.png");
         
